@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://crm-najot.herokuapp.com/image/Najot_Talim-01.png" sizes="24x24" type="image/x-icon">
+    <title>Najot ta'lim</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="CreateReader.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="/">
+                        <span class="icon">
+                            <img class="iconLogo" src="https://crm-najot.herokuapp.com/image/Najot_Talim-01-removebg-preview.png" width="65" height="65" alt="">
+                        </span>
+                        <span class="title">Najot ta'lim crm</span>
+                    </a>
+                </li>
+
+                <li class="hovered">
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Guruhlar</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="container">
+            </div>
+            <div class="modal">
+              <div class="modal-about">
+                <p class="modal-about-padding">Kurs Tanlovi</p>
+                <p class="modalClose">&times;</p>
+              </div>
+              <select class="form-top-selects form-top-selectr-user " class="form-top-select" placeholder="Kurs Tanlovi" required type="text">
+              </select>
+      </div>
+      
+
+ 
+      <div class="card-Crouser">
+        <div class="card-Crouser-about">
+            <h3 class="card-Crouser-about-heading">Guruh Ro'yxati</h3>
+        </div>
+        <hr class="headring">
+</div>
+<div class="teachers">
+  <ul class="teacher-list-static">
+    <li class="teacher-list-item-static">
+      <p class="teacher-list-item-static-padding">Guruh raqami</p>
+      <p class="teacher-list-item-static-padding">Kurs nomi</p>
+      <p class="teacher-list-item-static-padding">Ustoz ismi</p>
+    </li>
+  </ul>
+
+    <ul class="teachers-list">
+    <% for(let group of foundGroups) { %>
+        <li class="teacher-list-item">
+            <p class="teacher-list-item-padding"><%= group.GroupName%></p>
+            <p class="teacher-list-item-padding"><%= group.KursName%></p>
+            <p class="teacher-list-item-padding"><%= group.TeacherName%></p>
+          </li>
+        <li>
+        </li>
+        <% } %>
+</ul>
+</div>
+        </div>
+        <div
+        class="overlay"></div>
+          </div>
+          <script src="student.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

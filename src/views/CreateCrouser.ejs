@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://crm-najot.herokuapp.com/image/Najot_Talim-01.png" sizes="24x24" type="image/x-icon">
+    <title>  Najot ta'lim CRM</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="CreateReader.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <!-- <ion-icon name="logo-apple"></ion-icon> -->
+                            <img class="iconLogo" src="https://crm-najot.herokuapp.com/image/Najot_Talim-01-removebg-preview.png" width="65" height="65" alt="">
+                        </span>
+                        <span class="title">Najot ta'lim crm</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Ma'lumotlar</span>
+                    </a>
+                </li>
+
+                <li > 
+                    <a href="teacher">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">O'qituvchi qo'shish</span>
+                    </a>
+                </li>
+
+                <li  >
+                    <a href="createReader">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">O'quvchi qo'shish</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Gruop">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Guruh yaratish</span>
+                    </a>
+                </li>
+                <li class="hovered">
+                    <a  href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Kurs qo'shish</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="container">
+              <form action="/Crouser" method="POST" enctype="multipart/form-data" class="form">
+                  
+                <h3 class="form-heading">Kurs qo'shish</h3>
+                <div class="form-file">
+                    <input type="file" id="file" name="file"  required>
+                    <label  for="file" name="file"><img src="https://crm-najot.herokuapp.com/image/Camera-file.svg" width="58" height="55" alt="" ></label>
+                <p class="form-file-padding">Kurs rasmni qo'shish</p>
+                </div>
+                <div class="form-top">
+                  <div class="form-top-inputs">
+                    <p class="form-top-inputs-padding">Kurs nomi</p>
+                    <input class="form-top-input" name="course" placeholder="Kurs nomini kiriting" required type="text">
+                  </div>
+                  <div class="form-top-inputs">
+                    <p class="form-top-inputs-padding">Kurs narxi</p>
+                    <input class="form-top-input" name="price" placeholder="Kurs narxini kiriting" required type="text">
+                  </div>
+                </div>
+                <div class="form-top">
+                  <div class="form-top-inputs">
+                    <p class="form-top-inputs-padding">Kurs mavqeyi</p>
+                        <div class="form-top-inputr">
+                            <div class="form-top-inputs-chekbox">
+                                <input  type="radio"value="Bootcamp" style="color: white;" name="Bootcamp">Bootcamp</input>
+                            </div>
+                            <div class="form-top-inputs-chekbox">
+                            <input type="radio"  value="standart" name="standart">standart</input>
+                            </div>
+                        </div>
+                    </div>
+                  <div class="form-top-inputs">
+                    <p class="form-top-inputs-padding" >Kurs haqida ma'lumot</p>
+                    <input class="form-top-input" name="des" placeholder="Kurs haqida ma'lumot kiriting" required type="text">
+                  </div>
+                </div>
+                <button class="form-button">Kursni qo'shish</button>
+              </form>
+            </div>
+      
+
+                <div class="card-Crouser">
+                        <div class="card-Crouser-about">
+                            <h3 class="card-Crouser-about-heading">Kurslar Ro'yxati</h3>
+                            <button class="card-Crouser-about-button"><h2 class="card-Crouser-about-button-span">+</h2> Kurs qo'shish</button>
+                        </div>
+                        <hr class="headring">
+                </div>
+                <ul class="item-card"> 
+                    <% courser.map( elem =>{ %> 
+                    <li class="item-card-list"> 
+                        <div class="item-card-list-about">
+                        <h3 class="item-card-list-heading"><%= elem.course %></h3>
+                        <h4 class="item-card-list-heading4"><%= elem.standart %><%= elem.Bootcamp %></h4>
+                        </div>
+                        <p class="item-card-list-padding"><%= elem.des %></p>
+                        <div class="item-card-list-bottom">
+                            <h3 class="item-card-list-pirce"><%= elem.price %></h3>
+                            <div class="item-card-list-bottom-image-border">
+                            <img class="item-card-list-bottom-image" width="45" height="40" src=<%= elem.imageLogo  %>>
+
+                            </div>
+                            </div>
+                    </li> 
+                    <% }) %> 
+                </ul>
+        </div>
+        <div
+        class="overlay"></div>
+          </div>
+
+    <script src="admin.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

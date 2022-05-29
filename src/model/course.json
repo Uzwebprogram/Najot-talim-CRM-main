@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "course": "Web-dasturlash",
+        "standart": "standart",
+        "des": "Standart kursda Full stack yo'nalishida o'qiysiz 9 oy haftada 3 marta 2 soatdan dars ",
+        "price": "700 ming so'm",
+        "imageLogo": "https://crm-najot.herokuapp.com/image/web-code.svg"
+    },
+    {
+        "id": 2,
+        "course": "web dasturlash",
+        "Bootcamp": "Bootcamp",
+        "des": "Bootcamp kursda Front end yoki Back end ni birini tanlaysiz o'quv jarayoni 7 oy haftada 5 kun 5 soatdan ",
+        "price": "2 mln 300 ming so'm",
+        "imageLogo": "https://crm-najot.herokuapp.com/image/web-code.svg"
+    },
+    {
+        "id": 3,
+        "course": "web-dizayn",
+        "Bootcamp": "Bootcamp",
+        "des": "web dizayn Bootcamp kursda  o'quv jarayoni 6 oy haftada 5 kun 5 soatdan ",
+        "price": "1 mln 300 ming so'm",
+        "imageLogo": "https://crm-najot.herokuapp.com/image/paint.svg"
+    },
+    {
+        "id": 4,
+        "course": "Smm",
+        "standart": "standart",
+        "des": "Smm Standart kursda  o'quv jarayoni 6 oy haftada 5 kun 5 soatdan",
+        "price": "800 min so'm",
+        "imageLogo": "https://crm-najot.herokuapp.com/uploads/messenger.PNG"
+    },
+    {
+        "id": 5,
+        "course": "Grafik-dizayn",
+        "standart": "standart",
+        "des": "Grafik dizayn Standart kursda  o'quv jarayoni 6 oy haftada 5 kun 5 soatdan",
+        "price": "1 mln 200 ming",
+        "imageLogo": "https://crm-najot.herokuapp.com/uploads/Image.e699403574e518904e4c.png"
+    },
+    {
+        "id": 6,
+        "course": "Moushin-grafika",
+        "standart": "standart",
+        "des": "Moushin grafika Bootcamp kursda  o'quv jarayoni 6 oy haftada 5 kun 5 soatdan",
+        "price": "1 mln 500 ming",
+        "imageLogo": "https://crm-najot.herokuapp.com/uploads/MainBackground.ac6efbb24b5529e0c226.png"
+    }
+]

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://crm-najot.herokuapp.com/image/Najot_Talim-01.png" sizes="24x24" type="image/x-icon">
+    <title>  Najot ta'lim CRM</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="CreateReader.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="/">
+                        <span class="icon">
+                            <img class="iconLogo" src="https://crm-najot.herokuapp.com/image/Najot_Talim-01-removebg-preview.png" width="65" height="65" alt="">
+                        </span>
+                        <span class="title">Najot ta'lim crm</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Ma'lumotlar</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="teacher">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">O'qituvchi qo'shish</span>
+                    </a>
+                </li>
+
+                <li  class="hovered">
+                    <a href="createReader">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">O'quvchi qo'shish</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Gruop">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Guruh yaratish</span>
+                    </a>
+                </li>
+                <li>
+                  <a href="Crouser">
+                      <span class="icon">
+                          <ion-icon name="settings-outline"></ion-icon>
+                      </span>
+                      <span class="title">Kurs qo'shish</span>
+                  </a>
+              </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="container">
+
+              <form class="form" action="/createReader" method="POST" enctype="multipart/form-data" >
+                <h3 class="form-heading">O'quvchi qo'shish</h3>
+    
+                <div class="form-file">
+                    <input type="file" id="file" name="file" required >
+                    <label for="file" ><img src="https://crm-najot.herokuapp.com/image/Camera-file.svg" width="58" height="55" alt=""></label>
+                <p class="form-file-padding">O'quvchi rasmni qo'shish</p>
+                </div>
+                <div class="form-top">
+                  <div class="form-top-inputs">
+                    <p class="form-top-inputs-padding" >Ism</p>
+                    <input class="form-top-inputer" name="name" placeholder="Ism kiriting" required type="text">
+                  </div>
+                  <div class="form-top-inputs">
+                    <p class="form-top-inputs-padding">Familya</p>
+                    <input class="form-top-inputer" placeholder="Familya kiriting" name="surname" required type="text">
+                  </div>
+                </div>
+                <div class="form-top">
+                  <div class="form-top-inputs">
+                    <p class="form-top-inputs-padding">Maxfiy raqami</p>
+                    <input class="form-top-inputer" name="password" placeholder="Maxfiy raqami"  required type="text">
+
+                  </div>
+                  <div class="form-top-inputs">
+                    <p class="form-top-inputs-padding">Kurs yo'nalishi</p>
+                    <select class="form-top-inputer form-top-input-course" placeholder="Yashash joyni kiriting" name="cursname" required type="text">
+                      <% CourserFilter.map(elem =>{ %> 
+                      <option class="form-top-select"><%= elem.course %> </option>
+                      <% }) %> 
+                    </select>
+                  </div>
+                </div>
+                <div class="form-top">
+                  <div class="form-top-inputs">
+                    <p class="form-top-inputs-padding" >Yoshi</p>
+                    <input class="form-top-inputer" name="age" placeholder="Yoshi kiriting" required type="date">
+                  </div>
+                  <div class="form-top-inputs">
+                    <p class="form-top-inputs-padding" >Guruh</p>
+                    <select class="form-top-inputer  form-top-selectr-user" name="GroupName" placeholder="Yashash joyni kiriting" required type="text">
+                      
+                    </select>
+
+                  </div>
+                </div>
+                <div class="form-top">
+                  <div class="form-top-inputs">
+                    <p class="form-top-inputs-padding" >Telefon raqam</p>
+                    <input class="form-top-inputer" name="telefon" placeholder="Telefon raqam kiriting" required type="text">
+                  </div>
+                </div>
+
+                <button class="form-button">Ro'yxatga qo'shish</button>
+              </form>
+            </div>
+            <div class="modal">
+              <div class="modal-about">
+                <p class="modal-about-padding">Kurs Tanlovi</p>
+                <p class="modalClose">&times;</p>
+              </div>
+              <select class="form-top-selects form-top-selectr-user " class="form-top-select" placeholder="Kurs Tanlovi" required type="text">
+              </select>
+      </div>
+      
+
+ 
+      <div class="card-Crouser">
+        <div class="card-Crouser-about">
+            <h3 class="card-Crouser-about-heading">O'quvchilar Ro'yxati</h3>
+            <button class="card-Crouser-about-button"><h2 class="card-Crouser-about-button-span">+</h2> O'quvchi qo'shish</button>
+        </div>
+        <hr class="headring">
+</div>
+<div class="teachers">
+  <ul class="teacher-list-static">
+    <li class="teacher-list-item-static">
+  
+      <p class="teacher-list-item-static-padding"><span class="teacher-list-item-static-padding">ID</span> <span class="teacher-list-item-static-padding">O'qituvchi rasmi </span> Ism Familya</p>
+      <p class="teacher-list-item-static-padding">Yoshi</p>
+      <p class="teacher-list-item-static-padding">Telefon raqami</p>
+      <p class="teacher-list-item-static-padding">Guruh nomi</p>
+      <p class="teacher-list-item-static-padding">Kurs nomi</p>
+    </li>
+  </ul>
+  <ul class="teachers-list">
+    <% StudentFilter.map( elem => { %> 
+        <li class="teacher-list-item">
+           
+          <div class="image-name">
+            <p class="teacher-list-item-padding"><%= elem.id %> </p>
+
+            <img class="teacher-list-item-avatar" width="40" height="40" src=<%= elem.AvatarUser %>  alt="">
+          <p class="teacher-list-item-padding"><%= elem.name %> </p>
+          
+          <p class="teacher-list-item-padding"><%= elem.surname %> </p>
+          </div>
+          <p class="teacher-list-item-padding"><%= elem.age %> </p>
+          <p class="teacher-list-item-padding"><%= elem.telefon %> </p>
+          <p class="teacher-list-item-padding"><%= elem.GroupName %> </p>
+          <p class="teacher-list-item-padding"><%= elem.cursname %> </p>
+          
+        </li>
+      <% }) %> 
+  </ul>
+</div>
+        </div>
+        <div
+        class="overlay"></div>
+          </div>
+          <script src="student.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

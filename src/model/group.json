@@ -1,0 +1,71 @@
+[
+    {
+        "id": 1,
+        "GroupName": "N16",
+        "KursName": "Smm",
+        "standart": "standart",
+        "TeacherName": "Saidbek",
+        "gruopDate": "2021-03-04",
+        "AvatarUser": "https://crm-najot.herokuapp.com/uploads/photo_2021-08-12_15-39-52.jpg"
+    },
+    {
+        "id": 2,
+        "GroupName": "N14",
+        "KursName": "Web-dasturlash",
+        "standart": "standart",
+        "TeacherName": "Baxtiyor",
+        "gruopDate": "2021-0-08",
+        "AvatarUser": "https://crm-najot.herokuapp.com/uploads/Web-dasturlash.jpg"
+    },
+    {
+        "id": 3,
+        "GroupName": "N16",
+        "KursName": "web-dizayn",
+        "TeacherName": "Bobur",
+        "gruopDate": "2022-03-04",
+        "AvatarUser": "https://crm-najot.herokuapp.com/uploads/Web-dasturlash.jpg"
+    },
+    {
+        "id": 4,
+        "GroupName": "N15",
+        "KursName": "Web-dasturlash",
+        "standart": "standart",
+        "TeacherName": "Ulug'bek",
+        "gruopDate": "2021-04-09",
+        "AvatarUser": "https://crm-najot.herokuapp.com/uploads/Web-dasturlash.jpg"
+    },
+    {
+        "id": 5,
+        "GroupName": "N30",
+        "KursName": "Grafik-dizayn",
+        "Bootcamp": "Bootcamp",
+        "TeacherName": "Azizbek",
+        "gruopDate": "2022-12-23",
+        "AvatarUser": "https://crm-najot.herokuapp.com/uploads/kurs.jpg"
+    },
+    {
+        "id": 6,
+        "GroupName": "N30",
+        "KursName": "Moushin-grafika",
+        "Bootcamp": "Bootcamp",
+        "TeacherName": "Anvarbek",
+        "gruopDate": "2022-04-28",
+        "AvatarUser": "https://crm-najot.herokuapp.com/uploads/kurs.jpg"
+    },
+    {
+        "id": 7,
+        "GroupName": "27-guruh",
+        "KursName": "Moushin-grafika",
+        "TeacherName": "eshmat",
+        "gruopDate": "3232-03-24",
+        "AvatarUser": "https://crm-najot.herokuapp.com/uploads/photo_2022-04-04_23-14-43.jpg"
+    },
+    {
+        "id": 8,
+        "GroupName": "dadsasd",
+        "KursName": "Moushin-grafika",
+        "TeacherName": "Anvarbek",
+        "gruopDate": "3212-03-12",
+        "AvatarUser": "https://crm-najot.herokuapp.com/uploads/photo_2022-05-25_09-36-35.jpg"
+    }
+]
